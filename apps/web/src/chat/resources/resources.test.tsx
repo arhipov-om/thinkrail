@@ -269,6 +269,7 @@ test("the inspector renders a listbox of options whose accessible names carry th
 		'aria-label="Build &lt;script&gt;: echo &#x27;&lt;img src=x onerror=bad()&gt;&#x27;, Running"',
 	);
 	expect(html).toContain('aria-label="scout: &lt;b&gt;Inspect&lt;/b&gt; the registry, Queued"');
+	expect(html).toContain("group-hover:invisible");
 	expect(html.match(/&lt;b&gt;Inspect&lt;\/b&gt; the registry/g)?.length).toBeGreaterThanOrEqual(2);
 	const options = html.match(/<div role="option"[^>]*>(?:(?!<\/div>)[\s\S])*<\/div>/g) ?? [];
 	expect(options.length).toBe(4);

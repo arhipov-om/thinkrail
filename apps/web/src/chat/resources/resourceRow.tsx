@@ -399,7 +399,7 @@ export function ResourceRow({
 		resource.kind === "command" && "tr-code-text-small",
 	);
 	const meta = (
-		<span className="flex shrink-0 items-center gap-8 text-text-subtle tr-text-metadata tabular-nums group-hover:hidden group-focus-within:hidden">
+		<span className="flex shrink-0 items-center gap-8 text-text-subtle tr-text-metadata tabular-nums group-hover:invisible group-focus-within:invisible">
 			<StateText state={state} kind={resource.kind} />
 			{elapsed ? <span>{elapsed}</span> : null}
 			{exitCode !== undefined && exitCode !== null ? <ExitBadge exitCode={exitCode} /> : null}
